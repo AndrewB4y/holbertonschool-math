@@ -12,18 +12,19 @@
 
 void display_complex_number(complex c)
 {
-
+	if (c.re == 0 && c.im == 0)
+		return;
 	if (c.re != 0 && c.im != 0)
 	{
-		printf("%f + %fi\n", c.re, c.im);
+		printf("%g + %gi\n", c.re, c.im);
 		return;
 	}
 
 	if (c.re != 0)
-		printf("%f", c.re);
+		printf("%g", c.re);
 
 	if (c.im != 0)
-		printf("%fi", c.im);
+		printf("%gi", c.im);
 
 	printf("\n");
 }
