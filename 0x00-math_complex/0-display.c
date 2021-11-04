@@ -23,6 +23,12 @@ void display_complex_number(complex c)
 		return;
 	}
 
+	if (c.re == 0 && c.im != 0)
+	{
+		printf("0 + %gi\n", c.im);
+		return;
+	}
+
 	if (c.re != 0)
 		printf("%g", c.re);
 
