@@ -15,15 +15,15 @@ void display_complex_number(complex c)
 
 	if (c.re != 0 && c.im != 0)
 	{
-		printf("%g + %gi\n", c.re, c.im);
+		printf("%f + %fi\n", c.re, c.im);
 		return;
 	}
 
 	if (c.re != 0)
-		printf("%g", c.re);
+		printf("%f", c.re);
 
 	if (c.im != 0)
-		printf("%gi", c.im);
+		printf("%fi", c.im);
 
 	printf("\n");
 }
