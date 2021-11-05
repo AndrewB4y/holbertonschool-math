@@ -22,13 +22,13 @@ void display_complex_number(complex c)
 		printf("%g", c.re);
 		if (c.im < 0)
 			printf(" - %gi", c.im * (-1));
-		else if (c.im != 0)
+		else
 			printf(" + %gi", c.im);
 	}
 	else
 	{
 		if (c.im != 0)
-			printf("%gi", c.im);
+			printf("0 + %gi", c.im);
 	}
 	printf("\n");
 }
