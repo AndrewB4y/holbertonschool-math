@@ -16,5 +16,6 @@ typedef struct complex_s
 
 
 void display_complex_number(complex c);
+complex conjugate(complex c);
 
 #endif
