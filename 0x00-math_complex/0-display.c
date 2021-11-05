@@ -27,7 +27,9 @@ void display_complex_number(complex c)
 	}
 	else
 	{
-		if (c.im != 0)
+		if (c.im < 0)
+			printf("0 - %gi", c.im * (-1));
+		else
 			printf("0 + %gi", c.im);
 	}
 	printf("\n");
