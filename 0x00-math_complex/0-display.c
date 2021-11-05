@@ -14,23 +14,29 @@ void display_complex_number(complex c)
 {
 	if (c.re == 0 && c.im == 0)
 	{
-		printf("0 + 0i\n");
+		printf("0\n");
 		return;
 	}
 	if (c.re != 0)
 	{
 		printf("%g", c.re);
 		if (c.im < 0)
-			printf(" - %gi", c.im * (-1));
+			if (c.im == -1)
+				printf("- i");
+			else
+				printf(" - %gi", c.im * (-1));
 		else
-			printf(" + %gi", c.im);
+			if (c.im == 1)
+				printf("+ i");
+			else
+				printf(" - %gi", c.im);
 	}
 	else
 	{
 		if (c.im < 0)
-			printf("0 - %gi", c.im * (-1));
+			printf("- %gi", c.im * (-1));
 		else
-			printf("0 + %gi", c.im);
+			printf("%gi", c.im);
 	}
 	printf("\n");
 }
