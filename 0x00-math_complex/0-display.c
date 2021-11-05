@@ -28,8 +28,8 @@ void display_complex_number(complex c)
 		else
 			if (c.im == 1)
 				printf("+ i");
-			else
-				printf(" - %gi", c.im);
+			else if (c.im != 0)
+				printf(" + %gi", c.im);
 	}
 	else
 	{
